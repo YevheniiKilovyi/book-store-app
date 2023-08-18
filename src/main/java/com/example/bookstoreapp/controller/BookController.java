@@ -6,6 +6,7 @@ import com.example.bookstoreapp.dto.response.BookDto;
 import com.example.bookstoreapp.service.BookService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Pageable;
@@ -41,13 +42,15 @@ public class BookController {
 
     @PostMapping
     @Operation(summary = "Create a new book", description = "Create a new book")
-    public BookDto createBook(@RequestBody CreateBookRequestDto requestDto) {
+    @ResponseStatus(HttpStatus.CREATED)
+    public BookDto createBook(@RequestBody @Valid CreateBookRequestDto requestDto) {
         return bookService.save(requestDto);
     }
 
     @PutMapping("/{id}")
     @Operation(summary = "Update a book", description = "Update a book")
-    public BookDto update(@PathVariable Long id, @RequestBody CreateBookRequestDto requestDto) {
+    public BookDto update(@PathVariable Long id,
+                          @RequestBody @Valid CreateBookRequestDto requestDto) {
         return bookService.update(id, requestDto);
     }
 
