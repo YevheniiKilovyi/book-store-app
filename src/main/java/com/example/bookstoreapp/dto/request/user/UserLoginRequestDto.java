@@ -1,6 +1,6 @@
 package com.example.bookstoreapp.dto.request.user;
 
-import com.example.bookstoreapp.lib.passwordPattern.PasswordValidator;
+import com.example.bookstoreapp.lib.passwordpatter.PasswordValidator;
 import jakarta.validation.constraints.Email;
 
 public class UserLoginRequestDto {

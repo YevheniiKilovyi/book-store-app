@@ -1,7 +1,7 @@
 package com.example.bookstoreapp.dto.request.user;
 
-import com.example.bookstoreapp.lib.fieldMatch.FieldMatch;
-import com.example.bookstoreapp.lib.passwordPattern.PasswordValidator;
+import com.example.bookstoreapp.lib.fieldmatch.FieldMatch;
+import com.example.bookstoreapp.lib.passwordpatter.PasswordValidator;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

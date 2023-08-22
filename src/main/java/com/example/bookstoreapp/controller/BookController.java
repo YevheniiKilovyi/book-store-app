@@ -2,7 +2,7 @@ package com.example.bookstoreapp.controller;
 
 import com.example.bookstoreapp.dto.request.book.CreateBookRequestDto;
 import com.example.bookstoreapp.dto.response.book.BookDto;
-import com.example.bookstoreapp.dto.searchParams.BookSearchParameters;
+import com.example.bookstoreapp.dto.searchparams.BookSearchParameters;
 import com.example.bookstoreapp.service.BookService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

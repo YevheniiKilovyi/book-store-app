@@ -1,4 +1,4 @@
-package com.example.bookstoreapp.lib.emailPattern;
+package com.example.bookstoreapp.lib.emailpattern;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

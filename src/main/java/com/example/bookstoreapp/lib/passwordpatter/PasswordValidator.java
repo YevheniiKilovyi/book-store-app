@@ -1,4 +1,4 @@
-package com.example.bookstoreapp.lib.emailPattern;
+package com.example.bookstoreapp.lib.passwordpatter;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
@@ -7,10 +7,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Constraint(validatedBy = EmailPatternValidator.class)
+@Constraint(validatedBy = PasswordPatternValidator.class)
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface EmailValidator {
+public @interface PasswordValidator {
     String message() default "Invalid password";
 
     Class<?>[] groups() default {};

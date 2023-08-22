@@ -1,4 +1,4 @@
-package com.example.bookstoreapp.lib.fieldMatch;
+package com.example.bookstoreapp.lib.fieldmatch;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

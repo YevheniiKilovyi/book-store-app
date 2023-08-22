@@ -1,4 +1,4 @@
-package com.example.bookstoreapp.dto.searchParams;
+package com.example.bookstoreapp.dto.searchparams;
 
 public record BookSearchParameters(String[] titles, String[] authors, String[] isbns,
                                    String[] minPrices, String[] maxPrices,
