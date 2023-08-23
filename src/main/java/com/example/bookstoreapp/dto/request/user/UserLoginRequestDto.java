@@ -1,11 +1,14 @@
 package com.example.bookstoreapp.dto.request.user;
 
-import com.example.bookstoreapp.lib.passwordpatter.PasswordValidator;
+import com.example.bookstoreapp.lib.passwordpattern.PasswordValidator;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Size;
 
-public class UserLoginRequestDto {
-    @Email
-    private String email;
-    @PasswordValidator
-    private String passwword;
+public record UserLoginRequestDto(
+        @Size(min = 7, max = 50)
+        @Email
+        String email,
+        @PasswordValidator
+        String password
+) {
 }

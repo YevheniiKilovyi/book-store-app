@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-default-admin-user
+      author: YevheniiKilovyi
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: email
+                  value: "admin@i.ua"
+              - column:
+                  name: password
+                  value: "$2a$10$A1ldcVacdOWBYywqS6QVEeDXelcY0s6LhNHp558wVetX9ovG17nq6"
+              - column:
+                  name: first_name
+                  value: "Admin"
+              - column:
+                  name: last_name
+                  value: "Admin"
+              - column:
+                  name: shipping_address
+                  value: "Admin Address"

@@ -1,4 +1,4 @@
-package com.example.bookstoreapp.lib.passwordpatter;
+package com.example.bookstoreapp.lib.passwordpattern;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

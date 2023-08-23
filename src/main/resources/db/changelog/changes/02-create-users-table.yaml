@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: create-users-table
-      author: YourName
+      author: YevheniiKilovyi
       changes:
         - createTable:
             tableName: users

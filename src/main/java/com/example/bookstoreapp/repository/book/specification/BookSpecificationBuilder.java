@@ -1,4 +1,4 @@
-package com.example.bookstoreapp.repository.book;
+package com.example.bookstoreapp.repository.book.specification;
 
 import com.example.bookstoreapp.dto.searchparams.BookSearchParameters;
 import com.example.bookstoreapp.model.Book;
