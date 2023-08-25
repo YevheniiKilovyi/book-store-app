@@ -23,7 +23,6 @@ public class JwtUtil {
     }
 
     public String generateToken(String email) {
-        System.out.println("generating token");
         return Jwts.builder()
                 .setSubject(email)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
@@ -33,7 +32,6 @@ public class JwtUtil {
     }
 
     public boolean isValidToken(String token) {
-        System.out.println("token validation");
         try {
             Jws<Claims> claimsJws = Jwts.parserBuilder()
                     .setSigningKey(secret)
@@ -46,12 +44,10 @@ public class JwtUtil {
     }
 
     public String getUsername(String token) {
-        System.out.println("getting username from token");
         return getClaimsFromToken(token, Claims::getSubject);
     }
 
     private <T> T getClaimsFromToken(String token, Function<Claims, T> claimsResolver) {
-        System.out.println("getting claims from token");
         final Claims claims = Jwts.parserBuilder()
                 .setSigningKey(secret)
                 .build()
