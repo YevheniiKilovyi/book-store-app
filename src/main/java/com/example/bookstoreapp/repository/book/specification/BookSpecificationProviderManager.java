@@ -1,4 +1,4 @@
-package com.example.bookstoreapp.repository.book;
+package com.example.bookstoreapp.repository.book.specification;
 
 import com.example.bookstoreapp.model.Book;
 import com.example.bookstoreapp.repository.SpecificationProvider;

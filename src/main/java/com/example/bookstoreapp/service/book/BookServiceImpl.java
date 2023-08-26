@@ -1,22 +1,21 @@
-package com.example.bookstoreapp.service.impl;
+package com.example.bookstoreapp.service.book;
 
-import com.example.bookstoreapp.dto.BookSearchParameters;
-import com.example.bookstoreapp.dto.request.CreateBookRequestDto;
-import com.example.bookstoreapp.dto.response.BookDto;
+import com.example.bookstoreapp.dto.request.book.CreateBookRequestDto;
+import com.example.bookstoreapp.dto.response.book.BookDto;
+import com.example.bookstoreapp.dto.searchparams.BookSearchParameters;
 import com.example.bookstoreapp.exception.EntityNotFoundException;
-import com.example.bookstoreapp.mapper.BookMapper;
+import com.example.bookstoreapp.mapper.book.BookMapper;
 import com.example.bookstoreapp.model.Book;
 import com.example.bookstoreapp.repository.book.BookRepository;
-import com.example.bookstoreapp.repository.book.BookSpecificationBuilder;
-import com.example.bookstoreapp.service.BookService;
+import com.example.bookstoreapp.repository.book.specification.BookSpecificationBuilder;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 @AllArgsConstructor
-@Component
+@Service
 public class BookServiceImpl implements BookService {
     private final BookRepository bookRepository;
     private final BookMapper bookMapper;
