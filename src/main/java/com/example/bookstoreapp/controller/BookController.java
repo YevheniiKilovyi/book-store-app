@@ -2,6 +2,7 @@ package com.example.bookstoreapp.controller;
 
 import com.example.bookstoreapp.dto.request.book.CreateBookRequestDto;
 import com.example.bookstoreapp.dto.response.book.BookDto;
+import com.example.bookstoreapp.dto.response.book.BookDtoWithoutCategoryIds;
 import com.example.bookstoreapp.dto.searchparams.BookSearchParameters;
 import com.example.bookstoreapp.service.book.BookService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -39,7 +40,7 @@ public class BookController {
                     + " e.g., {\"page\": 1, \"size\": 10, \"sort\": \"title,asc\"}."
     )
     @ApiResponse(responseCode = "200", description = "Successfully retrieved the list of books")
-    public List<BookDto> findAll(Pageable pageable) {
+    public List<BookDtoWithoutCategoryIds> findAll(Pageable pageable) {
         return bookService.findAll(pageable);
     }
 

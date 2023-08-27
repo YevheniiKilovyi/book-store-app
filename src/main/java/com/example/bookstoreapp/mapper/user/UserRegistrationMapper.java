@@ -7,8 +7,8 @@ import com.example.bookstoreapp.model.User;
 import org.mapstruct.Mapper;
 
 @Mapper(config = MapperConfig.class)
-public interface UserRegistrationMapper {
-    UserResponseDto toDto(User user);
+public abstract class UserRegistrationMapper {
+    public abstract UserResponseDto toDto(User user);
 
-    User toModel(UserRegistrationRequestDto requestDto);
+    public abstract User toModel(UserRegistrationRequestDto requestDto);
 }
